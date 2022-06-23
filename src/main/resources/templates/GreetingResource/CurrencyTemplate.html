@@ -1,0 +1,34 @@
+{@models.CurrencyModel model}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Güncel Döviz {model.Gun}</title>
+</head>
+<body style="font-size:20px; display:inline-block;">
+    <h3>{model.Gun} tarihi için geçerli kurlar</h3>
+    <table style="margin:5px; border:1px solid black; background-color:black; font-size:24px;">
+        <tr>
+            <th style="padding:5px; border:1px solid black; background-color:aqua;" colspan="8">TCMB Döviz Kurları</th>
+        </tr>
+        <tr>
+            <td colspan="2"></td>
+            <td style="padding:5px; border:1px solid black; background-color:blue; color:yellow; text-align:center;" colspan="3">Döviz Alış</td>
+            <td style="padding:5px; border:1px solid black; background-color:blue; color:yellow; text-align:center;" colspan="3">Döviz Satış</td>
+        </tr>
+        <tr>
+            <td style="padding:5px; border:1px solid black; background-color:yellow;" colspan="2">Dolar</td>
+            <td style="padding:5px; border:1px solid black; background-color:yellow; text-align:center;" colspan="3">{model.UsdBuying}</td>
+            <td style="padding:5px; border:1px solid black; background-color:yellow; text-align:center;" colspan="3">{model.UsdSelling}</td>
+        </tr>
+        <tr>
+            <td style="padding:5px; border:1px solid black; background-color:darkblue; color:white;" colspan="2">Euro</td>
+            <td style="padding:5px; border:1px solid black; background-color:darkblue; color:white; text-align:center;" colspan="3">{model.EuroBuying}</td>
+            <td style="padding:5px; border:1px solid black; background-color:darkblue; color:white; text-align:center;" colspan="3">{model.EuroSelling}</td>
+        </tr>
+        <tr>
+            <td style="padding:5px; border:1px solid black; background-color:red; color:white; text-align:center;" colspan="8">Çapraz Kur: {model.ExchangeRate}</td>
+        </tr>
+    </table>
+</body>
+</html>
